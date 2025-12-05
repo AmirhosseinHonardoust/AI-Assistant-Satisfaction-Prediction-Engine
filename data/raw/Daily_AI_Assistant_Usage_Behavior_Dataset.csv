@@ -1,0 +1,301 @@
+timestamp,device,usage_category,prompt_length,session_length_minutes,satisfaction_rating,assistant_model,tokens_used
+2025-02-20 03:29:00,Desktop,Education,14,7.08,5,GPT-5.1,44
+2025-01-08 18:28:00,Mobile,Daily Tasks,32,13.07,2,GPT-4o,1047
+2025-01-12 17:56:00,Smart Speaker,Education,236,10.15,4,GPT-4o,1379
+2025-01-04 09:11:00,Smart Speaker,Productivity,98,14.45,1,GPT-5,1105
+2025-02-14 19:59:00,Smart Speaker,Research,220,4.5,5,GPT-5.1,107
+2025-02-08 00:37:00,Smart Speaker,Coding,245,8.01,2,GPT-5.1,598
+2025-01-13 09:21:00,Desktop,Entertainment,214,9.46,4,o1,1387
+2025-01-23 15:05:00,Mobile,Research,34,6.96,2,o1,956
+2025-02-20 09:54:00,Smart Speaker,Coding,201,7.12,2,GPT-5,1155
+2025-02-09 13:48:00,Tablet,Coding,108,12.54,5,GPT-4o,589
+2025-03-04 06:20:00,Tablet,Writing,134,10.93,5,GPT-5.1,989
+2025-02-28 21:56:00,Smart Speaker,Research,56,5.7,2,Mini,1357
+2025-03-06 08:53:00,Mobile,Entertainment,237,1.11,3,GPT-4o,945
+2025-03-06 16:23:00,Desktop,Research,132,12.79,3,Mini,1390
+2025-02-09 05:37:00,Mobile,Entertainment,135,14.25,4,Mini,495
+2025-02-03 23:50:00,Tablet,Daily Tasks,80,14.17,3,GPT-4o,1285
+2025-01-06 20:34:00,Tablet,Daily Tasks,106,11.57,4,GPT-5.1,682
+2025-02-07 08:36:00,Tablet,Coding,186,6.72,1,Mini,360
+2025-01-25 19:20:00,Desktop,Education,214,7.57,2,GPT-5,773
+2025-02-15 12:14:00,Desktop,Productivity,158,12.34,5,GPT-4o,104
+2025-01-24 05:25:00,Smart Speaker,Productivity,170,7.54,3,GPT-5.1,884
+2025-01-24 08:24:00,Desktop,Entertainment,142,7.53,4,GPT-4o,1246
+2025-03-05 09:19:00,Tablet,Daily Tasks,159,2.62,3,GPT-4o,330
+2025-01-09 06:07:00,Smart Speaker,Research,116,3.63,3,GPT-5,1233
+2025-01-24 19:07:00,Smart Speaker,Daily Tasks,215,7.46,2,GPT-5.1,1435
+2025-01-28 08:05:00,Tablet,Productivity,188,2.33,4,GPT-4o,681
+2025-03-06 20:46:00,Mobile,Education,85,9.93,2,o1,577
+2025-03-02 18:29:00,Desktop,Coding,176,11.85,5,GPT-4o,39
+2025-03-02 05:24:00,Desktop,Research,165,12.09,2,o1,95
+2025-02-11 12:20:00,Tablet,Entertainment,141,0.27,1,GPT-5.1,429
+2025-02-13 02:32:00,Tablet,Writing,174,11.87,3,Mini,1311
+2025-01-18 12:29:00,Desktop,Education,187,2.68,5,o1,278
+2025-01-13 06:42:00,Mobile,Productivity,77,14.36,4,GPT-4o,671
+2025-03-11 13:30:00,Tablet,Education,29,11.74,3,Mini,55
+2025-03-11 01:43:00,Desktop,Daily Tasks,150,0.42,5,GPT-4o,708
+2025-01-25 03:22:00,Tablet,Coding,100,7.36,4,GPT-4o,876
+2025-03-02 05:57:00,Mobile,Entertainment,173,5.69,4,GPT-5,181
+2025-01-28 18:53:00,Desktop,Entertainment,9,8.12,1,GPT-5.1,482
+2025-03-04 23:56:00,Tablet,Education,124,7.94,5,GPT-5,1483
+2025-03-05 23:40:00,Mobile,Productivity,137,11.83,2,GPT-5.1,812
+2025-02-20 21:05:00,Desktop,Research,204,12.26,4,GPT-5,84
+2025-01-18 15:29:00,Smart Speaker,Entertainment,212,11.64,2,GPT-5.1,437
+2025-01-08 21:25:00,Desktop,Daily Tasks,189,3.71,5,GPT-5,837
+2025-03-05 12:18:00,Smart Speaker,Productivity,142,8.38,2,GPT-4o,919
+2025-01-11 12:16:00,Tablet,Education,44,0.2,3,o1,169
+2025-01-18 05:16:00,Tablet,Daily Tasks,221,13.55,5,o1,787
+2025-02-13 10:50:00,Desktop,Daily Tasks,250,1.64,5,GPT-5.1,394
+2025-02-18 08:48:00,Desktop,Daily Tasks,135,1.48,2,GPT-4o,292
+2025-01-13 17:02:00,Smart Speaker,Writing,69,0.71,5,o1,375
+2025-01-16 02:44:00,Tablet,Entertainment,83,0.25,1,GPT-5,239
+2025-02-21 04:34:00,Smart Speaker,Entertainment,110,7.57,2,GPT-5.1,1147
+2025-01-11 22:36:00,Desktop,Research,173,1.04,5,GPT-5.1,860
+2025-03-01 20:44:00,Smart Speaker,Coding,75,3.16,2,Mini,710
+2025-02-16 19:07:00,Mobile,Daily Tasks,56,12.13,3,GPT-5,374
+2025-03-07 05:38:00,Tablet,Entertainment,213,1.26,4,Mini,1421
+2025-02-26 04:17:00,Mobile,Education,201,3.8,1,GPT-4o,448
+2025-01-19 16:45:00,Mobile,Research,151,5.32,2,GPT-4o,67
+2025-02-18 11:37:00,Desktop,Productivity,105,7.13,1,GPT-5.1,1283
+2025-03-03 00:40:00,Tablet,Research,146,14.37,2,GPT-4o,1269
+2025-01-19 08:16:00,Mobile,Entertainment,50,2.62,1,GPT-4o,987
+2025-01-19 07:29:00,Desktop,Coding,47,14.57,3,o1,717
+2025-01-19 16:14:00,Smart Speaker,Education,14,14.83,2,GPT-5,512
+2025-01-30 09:28:00,Mobile,Daily Tasks,6,3.58,4,GPT-5.1,934
+2025-02-02 15:21:00,Desktop,Productivity,229,1.52,5,GPT-5,776
+2025-02-04 19:23:00,Smart Speaker,Coding,46,3.75,2,o1,1035
+2025-01-18 08:29:00,Smart Speaker,Productivity,238,13.32,3,GPT-4o,851
+2025-01-06 12:47:00,Tablet,Entertainment,145,11.08,1,o1,432
+2025-01-18 20:20:00,Smart Speaker,Productivity,171,1.16,3,GPT-5,868
+2025-01-27 10:27:00,Smart Speaker,Research,71,14.11,1,GPT-4o,1113
+2025-01-02 06:26:00,Smart Speaker,Coding,144,0.81,1,GPT-5,1340
+2025-02-16 02:07:00,Smart Speaker,Education,37,10.94,4,GPT-5,1226
+2025-01-18 04:18:00,Mobile,Productivity,164,5.51,2,Mini,1066
+2025-01-05 12:18:00,Mobile,Education,116,14.77,3,Mini,916
+2025-01-14 05:46:00,Smart Speaker,Daily Tasks,83,5.07,2,GPT-4o,1407
+2025-03-05 18:03:00,Smart Speaker,Productivity,238,10.27,4,GPT-4o,347
+2025-01-27 11:52:00,Desktop,Entertainment,64,8.04,2,o1,119
+2025-01-05 21:48:00,Desktop,Education,139,4.14,1,GPT-4o,498
+2025-01-22 14:24:00,Tablet,Writing,239,8.04,3,o1,1331
+2025-01-19 12:48:00,Tablet,Daily Tasks,200,9.56,5,GPT-4o,310
+2025-02-28 00:32:00,Desktop,Research,197,5.61,2,GPT-5.1,803
+2025-01-17 12:55:00,Smart Speaker,Coding,61,6.14,5,Mini,1218
+2025-02-22 17:33:00,Tablet,Education,174,13.42,4,o1,1222
+2025-02-04 02:00:00,Tablet,Writing,66,9.68,4,o1,426
+2025-01-12 08:39:00,Smart Speaker,Coding,99,0.63,4,GPT-5.1,603
+2025-02-09 00:59:00,Mobile,Entertainment,233,4.48,1,GPT-4o,1182
+2025-03-05 02:58:00,Desktop,Research,171,10.72,5,GPT-5,658
+2025-02-21 10:01:00,Desktop,Education,54,14.07,3,o1,1337
+2025-02-20 09:45:00,Tablet,Coding,174,14.96,5,Mini,341
+2025-01-14 12:13:00,Desktop,Research,18,5.1,3,Mini,944
+2025-03-08 06:59:00,Tablet,Daily Tasks,221,3.53,2,Mini,759
+2025-02-21 13:54:00,Desktop,Productivity,222,2.01,2,GPT-5,910
+2025-01-16 19:06:00,Mobile,Productivity,97,4.87,4,GPT-5,1076
+2025-02-05 08:40:00,Desktop,Productivity,121,6.85,3,o1,330
+2025-01-12 01:29:00,Smart Speaker,Education,54,9.85,2,GPT-5,242
+2025-01-11 05:50:00,Mobile,Daily Tasks,34,7.13,1,GPT-5,1434
+2025-02-23 09:02:00,Smart Speaker,Entertainment,67,6.21,5,GPT-4o,671
+2025-02-02 08:45:00,Tablet,Research,215,2.15,2,GPT-4o,374
+2025-02-24 11:03:00,Tablet,Daily Tasks,105,10.42,1,GPT-5.1,913
+2025-02-22 07:37:00,Mobile,Entertainment,103,10.71,4,Mini,536
+2025-02-28 10:30:00,Tablet,Education,243,6.8,3,o1,750
+2025-02-20 22:45:00,Mobile,Research,162,11.66,2,GPT-5.1,1345
+2025-02-11 00:20:00,Mobile,Daily Tasks,108,11.1,1,Mini,1232
+2025-01-14 07:27:00,Desktop,Research,190,12.4,2,Mini,1283
+2025-03-02 10:29:00,Mobile,Entertainment,109,11.46,4,GPT-5.1,555
+2025-01-14 05:56:00,Mobile,Writing,36,0.85,4,GPT-4o,100
+2025-02-14 06:54:00,Mobile,Daily Tasks,46,12.39,4,GPT-5.1,1411
+2025-01-14 09:36:00,Desktop,Education,226,6.55,5,GPT-5.1,1153
+2025-01-04 08:11:00,Desktop,Daily Tasks,179,4.3,5,GPT-5,747
+2025-01-09 09:09:00,Tablet,Writing,174,5.58,3,Mini,1400
+2025-02-07 07:29:00,Tablet,Writing,242,1.63,4,o1,1305
+2025-02-23 23:38:00,Tablet,Coding,9,7.12,3,GPT-5.1,107
+2025-01-28 09:16:00,Mobile,Education,228,6.97,3,o1,89
+2025-02-06 07:28:00,Tablet,Writing,187,1.82,5,o1,445
+2025-03-03 04:28:00,Tablet,Research,20,9.29,2,GPT-4o,1500
+2025-01-12 11:46:00,Desktop,Productivity,104,4.93,1,Mini,352
+2025-02-01 01:56:00,Desktop,Coding,76,8.14,5,GPT-4o,1064
+2025-02-01 21:33:00,Tablet,Entertainment,6,9.98,1,GPT-4o,513
+2025-02-26 03:41:00,Smart Speaker,Writing,247,4.09,5,GPT-5.1,276
+2025-03-02 06:09:00,Mobile,Writing,147,13.38,1,o1,1142
+2025-01-26 22:39:00,Smart Speaker,Productivity,33,9.45,3,GPT-5,775
+2025-02-01 02:08:00,Smart Speaker,Education,113,7.46,5,o1,1456
+2025-02-10 08:59:00,Tablet,Daily Tasks,55,8.83,2,GPT-4o,882
+2025-02-15 04:13:00,Smart Speaker,Research,188,14.82,2,Mini,1151
+2025-01-20 20:51:00,Desktop,Entertainment,226,3.9,4,o1,327
+2025-03-06 02:38:00,Smart Speaker,Education,210,13.67,3,GPT-5.1,188
+2025-01-13 21:19:00,Smart Speaker,Productivity,248,10.36,4,GPT-4o,445
+2025-03-05 08:47:00,Smart Speaker,Coding,63,5.42,1,GPT-5,473
+2025-02-18 07:00:00,Smart Speaker,Education,48,9.99,3,Mini,105
+2025-01-20 20:20:00,Tablet,Productivity,66,1.07,4,GPT-4o,752
+2025-01-11 10:25:00,Tablet,Research,178,12.48,1,GPT-4o,267
+2025-01-20 08:33:00,Smart Speaker,Education,239,7.81,1,GPT-5.1,401
+2025-01-03 11:11:00,Smart Speaker,Research,119,5.27,5,Mini,1240
+2025-01-09 02:55:00,Desktop,Education,79,12.25,3,GPT-4o,930
+2025-02-07 14:43:00,Desktop,Research,184,1.22,2,Mini,80
+2025-01-08 19:45:00,Smart Speaker,Coding,161,12.71,5,GPT-5.1,1003
+2025-03-03 16:22:00,Desktop,Education,110,3.27,1,GPT-4o,363
+2025-02-16 04:37:00,Smart Speaker,Research,214,8.6,4,Mini,1048
+2025-02-08 02:38:00,Desktop,Coding,210,12.87,5,GPT-5.1,959
+2025-03-06 17:14:00,Mobile,Education,238,11.51,4,o1,776
+2025-02-19 10:10:00,Desktop,Entertainment,23,3.85,1,GPT-4o,354
+2025-02-10 22:43:00,Tablet,Productivity,7,9.92,2,GPT-4o,1087
+2025-01-13 05:05:00,Desktop,Writing,82,4.15,1,GPT-5,870
+2025-02-25 14:55:00,Mobile,Research,163,12.78,5,GPT-5,234
+2025-03-02 02:23:00,Smart Speaker,Writing,49,0.33,4,Mini,1273
+2025-03-09 07:31:00,Tablet,Entertainment,138,3.64,5,GPT-4o,849
+2025-02-14 12:30:00,Mobile,Writing,239,11.94,1,GPT-5,125
+2025-02-03 16:15:00,Desktop,Coding,125,7.62,3,GPT-5,930
+2025-02-19 13:53:00,Mobile,Education,198,7.21,5,GPT-4o,864
+2025-02-23 20:56:00,Mobile,Research,200,1.59,2,o1,1095
+2025-02-01 04:28:00,Tablet,Coding,122,3.84,3,GPT-5,298
+2025-02-09 18:35:00,Mobile,Research,134,7.14,5,GPT-5.1,1272
+2025-02-18 06:39:00,Tablet,Education,137,1.16,4,GPT-5,770
+2025-02-06 18:55:00,Desktop,Research,108,2.26,5,o1,53
+2025-03-07 14:09:00,Tablet,Productivity,187,11.89,5,GPT-4o,990
+2025-02-19 03:58:00,Desktop,Entertainment,155,1.77,2,GPT-5.1,1482
+2025-03-08 19:29:00,Smart Speaker,Productivity,193,9.5,5,GPT-5,958
+2025-01-30 13:32:00,Smart Speaker,Daily Tasks,172,7.22,3,GPT-5.1,431
+2025-01-13 06:00:00,Tablet,Productivity,109,5.51,4,Mini,1356
+2025-02-22 00:18:00,Smart Speaker,Coding,248,1.98,3,Mini,250
+2025-01-18 00:47:00,Tablet,Writing,162,6.72,2,GPT-4o,792
+2025-01-06 12:08:00,Mobile,Writing,119,8.11,3,o1,1301
+2025-02-27 00:57:00,Desktop,Productivity,221,1.47,3,GPT-4o,781
+2025-01-16 04:51:00,Smart Speaker,Research,179,0.65,5,o1,631
+2025-02-14 00:55:00,Desktop,Productivity,46,5.52,4,Mini,905
+2025-02-17 13:26:00,Smart Speaker,Education,87,3.68,4,Mini,85
+2025-02-09 07:30:00,Mobile,Education,200,7.63,1,o1,716
+2025-01-28 18:24:00,Desktop,Coding,117,6.93,1,Mini,1207
+2025-01-07 19:45:00,Desktop,Productivity,243,14.99,1,GPT-5,523
+2025-03-05 13:06:00,Tablet,Coding,66,10.37,5,GPT-5,1307
+2025-02-16 16:58:00,Desktop,Research,110,5.85,4,GPT-5.1,508
+2025-03-10 15:58:00,Tablet,Writing,26,11.55,1,GPT-5,871
+2025-01-27 20:01:00,Tablet,Productivity,168,11.44,2,GPT-4o,724
+2025-02-13 00:56:00,Tablet,Education,94,14.35,2,GPT-5.1,804
+2025-03-05 12:49:00,Mobile,Writing,44,14.2,3,GPT-5.1,1009
+2025-03-03 18:48:00,Smart Speaker,Writing,137,9.46,3,GPT-4o,1467
+2025-02-20 13:04:00,Desktop,Daily Tasks,60,5.17,3,GPT-5,1111
+2025-01-17 01:45:00,Smart Speaker,Writing,250,11.45,4,GPT-4o,52
+2025-02-08 20:27:00,Smart Speaker,Productivity,174,3.09,3,Mini,1055
+2025-02-11 00:48:00,Desktop,Education,33,11.34,4,o1,980
+2025-02-19 14:41:00,Mobile,Daily Tasks,45,7.08,5,GPT-5.1,243
+2025-01-09 04:50:00,Mobile,Writing,88,2.82,1,GPT-5,300
+2025-03-06 14:47:00,Smart Speaker,Education,103,4.28,5,GPT-4o,309
+2025-03-03 06:56:00,Smart Speaker,Writing,85,1.05,5,Mini,1240
+2025-02-26 00:09:00,Desktop,Education,52,14.87,5,GPT-4o,1423
+2025-01-07 03:40:00,Tablet,Productivity,226,5.52,2,o1,49
+2025-01-02 01:51:00,Desktop,Coding,191,7.14,5,GPT-5.1,77
+2025-01-31 21:46:00,Mobile,Daily Tasks,153,4.96,3,GPT-5,507
+2025-02-20 09:47:00,Tablet,Entertainment,153,2.21,1,GPT-5.1,1270
+2025-01-22 03:26:00,Desktop,Coding,165,13.53,1,Mini,1138
+2025-01-24 06:51:00,Desktop,Writing,230,10.45,3,Mini,714
+2025-01-23 21:07:00,Smart Speaker,Productivity,159,8.19,5,o1,731
+2025-03-07 02:06:00,Smart Speaker,Productivity,158,11.99,2,GPT-4o,1495
+2025-01-24 04:04:00,Desktop,Education,155,8.82,2,GPT-4o,284
+2025-01-09 20:22:00,Mobile,Education,16,1.46,3,GPT-4o,1119
+2025-01-29 14:51:00,Smart Speaker,Entertainment,6,13.73,3,GPT-5,601
+2025-03-04 02:20:00,Desktop,Writing,111,0.65,3,Mini,1364
+2025-03-07 17:31:00,Tablet,Writing,218,5.71,3,GPT-5,772
+2025-02-09 23:47:00,Smart Speaker,Entertainment,120,8.08,1,Mini,115
+2025-01-11 17:31:00,Smart Speaker,Research,73,13.93,2,GPT-4o,735
+2025-01-10 15:31:00,Mobile,Daily Tasks,166,9.0,4,Mini,321
+2025-03-09 19:44:00,Mobile,Coding,92,12.85,3,Mini,1115
+2025-01-15 05:01:00,Tablet,Research,133,3.12,3,Mini,1485
+2025-03-09 18:33:00,Smart Speaker,Research,212,1.03,1,GPT-5,1015
+2025-03-10 01:56:00,Smart Speaker,Productivity,217,9.25,4,o1,831
+2025-02-23 16:45:00,Desktop,Writing,131,1.01,4,GPT-4o,487
+2025-01-05 14:40:00,Desktop,Entertainment,155,1.55,5,Mini,1394
+2025-02-05 12:37:00,Smart Speaker,Education,159,8.94,5,o1,1176
+2025-02-28 09:38:00,Mobile,Education,26,8.65,4,GPT-4o,32
+2025-02-12 12:56:00,Mobile,Education,22,4.82,1,Mini,938
+2025-01-18 21:12:00,Desktop,Research,197,0.25,5,o1,1200
+2025-02-13 06:59:00,Desktop,Education,250,7.97,5,o1,1020
+2025-01-27 05:52:00,Mobile,Writing,99,14.32,1,GPT-5,1475
+2025-02-22 15:20:00,Mobile,Writing,154,10.13,1,o1,32
+2025-02-17 19:51:00,Smart Speaker,Daily Tasks,16,11.83,2,GPT-4o,389
+2025-01-18 02:48:00,Mobile,Education,100,2.84,4,Mini,410
+2025-03-08 00:41:00,Tablet,Daily Tasks,206,11.5,5,GPT-5.1,587
+2025-02-06 23:22:00,Desktop,Research,57,9.41,3,o1,140
+2025-02-11 20:29:00,Tablet,Entertainment,30,6.62,3,GPT-4o,577
+2025-01-11 14:24:00,Mobile,Writing,66,6.97,5,GPT-4o,1417
+2025-02-27 19:09:00,Desktop,Entertainment,43,10.25,1,GPT-4o,430
+2025-03-10 12:22:00,Smart Speaker,Writing,48,7.32,3,o1,223
+2025-01-12 20:22:00,Mobile,Entertainment,72,9.1,3,GPT-5.1,1105
+2025-02-05 00:23:00,Desktop,Writing,188,0.75,2,Mini,241
+2025-02-21 18:40:00,Mobile,Writing,142,6.24,2,o1,1366
+2025-03-11 04:24:00,Desktop,Writing,201,2.5,3,GPT-4o,93
+2025-03-05 01:01:00,Desktop,Productivity,196,0.28,3,Mini,360
+2025-02-14 06:16:00,Tablet,Entertainment,203,11.96,3,GPT-5.1,391
+2025-03-08 14:01:00,Desktop,Coding,67,13.43,5,GPT-4o,1474
+2025-02-14 22:45:00,Desktop,Research,45,7.79,2,GPT-5,759
+2025-02-26 03:20:00,Mobile,Coding,89,12.42,1,o1,245
+2025-02-22 15:43:00,Desktop,Writing,245,2.5,2,o1,1265
+2025-02-05 16:15:00,Smart Speaker,Education,135,7.75,1,o1,1252
+2025-03-04 21:42:00,Mobile,Education,111,7.43,2,GPT-5.1,605
+2025-01-25 23:23:00,Mobile,Productivity,44,10.4,3,o1,147
+2025-02-10 21:22:00,Smart Speaker,Productivity,28,7.94,4,o1,1315
+2025-02-24 05:37:00,Smart Speaker,Writing,39,9.38,2,GPT-4o,520
+2025-01-01 09:52:00,Desktop,Entertainment,76,4.42,3,GPT-4o,1287
+2025-02-13 00:57:00,Mobile,Writing,103,8.53,2,Mini,1389
+2025-03-10 03:16:00,Smart Speaker,Productivity,146,5.58,5,GPT-5,152
+2025-02-22 09:55:00,Tablet,Education,135,10.97,5,GPT-5,1235
+2025-02-08 20:57:00,Mobile,Education,166,4.46,1,GPT-5,815
+2025-03-02 06:51:00,Smart Speaker,Daily Tasks,244,7.24,4,o1,682
+2025-02-28 03:54:00,Tablet,Coding,127,3.14,4,GPT-4o,742
+2025-01-29 02:22:00,Desktop,Daily Tasks,29,0.8,2,GPT-5.1,1049
+2025-03-03 20:06:00,Mobile,Entertainment,198,9.72,3,Mini,930
+2025-01-11 00:12:00,Mobile,Productivity,77,13.15,3,GPT-5,1011
+2025-03-07 20:43:00,Mobile,Coding,90,10.08,4,GPT-5,1077
+2025-02-12 18:43:00,Smart Speaker,Productivity,113,9.12,4,GPT-5.1,860
+2025-02-22 23:14:00,Tablet,Coding,119,1.21,4,GPT-4o,530
+2025-01-31 14:16:00,Desktop,Research,193,13.63,1,Mini,296
+2025-03-05 13:45:00,Mobile,Productivity,164,13.34,5,Mini,1096
+2025-01-02 09:54:00,Desktop,Education,92,12.25,5,GPT-5,921
+2025-02-24 14:48:00,Desktop,Daily Tasks,172,4.3,3,GPT-5,650
+2025-02-21 20:50:00,Smart Speaker,Coding,39,14.98,3,o1,481
+2025-02-08 16:37:00,Smart Speaker,Coding,79,6.76,2,GPT-5.1,1118
+2025-01-17 00:42:00,Mobile,Education,158,11.58,1,GPT-4o,1312
+2025-02-24 01:07:00,Desktop,Entertainment,118,2.4,1,o1,1231
+2025-01-10 19:41:00,Tablet,Entertainment,86,13.55,4,GPT-5,32
+2025-02-21 01:14:00,Tablet,Daily Tasks,24,14.56,3,GPT-5.1,1410
+2025-02-16 03:47:00,Mobile,Daily Tasks,43,14.55,1,Mini,1112
+2025-01-17 03:54:00,Mobile,Education,173,2.33,2,Mini,1095
+2025-01-08 06:46:00,Tablet,Productivity,30,11.95,1,GPT-5,994
+2025-01-20 19:29:00,Desktop,Education,188,14.05,2,Mini,882
+2025-01-31 08:25:00,Smart Speaker,Entertainment,163,8.39,1,GPT-4o,1273
+2025-02-17 16:50:00,Mobile,Research,199,8.24,5,GPT-4o,1426
+2025-01-24 03:16:00,Tablet,Education,69,4.12,5,o1,1321
+2025-01-02 19:25:00,Desktop,Writing,125,7.84,3,o1,202
+2025-01-25 02:38:00,Desktop,Writing,28,3.67,1,o1,298
+2025-03-02 09:48:00,Desktop,Writing,245,7.24,1,GPT-4o,1298
+2025-02-20 14:09:00,Mobile,Entertainment,235,10.17,1,GPT-4o,482
+2025-01-25 03:00:00,Mobile,Research,7,2.18,1,GPT-4o,280
+2025-02-03 21:54:00,Tablet,Writing,243,12.08,4,GPT-5,724
+2025-03-06 01:14:00,Smart Speaker,Entertainment,183,3.83,2,GPT-4o,955
+2025-03-03 08:15:00,Desktop,Coding,160,14.93,4,Mini,985
+2025-01-30 18:29:00,Tablet,Entertainment,5,8.26,1,GPT-5.1,312
+2025-01-06 23:49:00,Desktop,Productivity,174,12.45,3,GPT-4o,364
+2025-02-26 22:54:00,Smart Speaker,Daily Tasks,58,7.08,1,o1,1407
+2025-02-04 15:28:00,Smart Speaker,Research,239,6.44,2,GPT-5.1,1084
+2025-02-11 10:33:00,Tablet,Coding,123,12.51,1,o1,679
+2025-03-04 20:01:00,Smart Speaker,Research,212,4.92,1,GPT-4o,1020
+2025-02-25 00:51:00,Tablet,Education,145,6.22,3,o1,770
+2025-02-28 05:53:00,Mobile,Writing,16,0.8,1,o1,907
+2025-01-26 00:24:00,Smart Speaker,Education,52,12.99,3,GPT-4o,836
+2025-02-13 11:20:00,Desktop,Entertainment,67,11.15,3,Mini,778
+2025-02-09 14:20:00,Tablet,Education,145,7.58,1,GPT-5,533
+2025-01-08 04:41:00,Smart Speaker,Writing,155,14.67,2,GPT-5.1,1316
+2025-03-08 13:14:00,Smart Speaker,Writing,95,14.98,5,GPT-5,1222
+2025-03-09 06:34:00,Smart Speaker,Writing,210,8.71,5,GPT-5,356
+2025-02-13 14:59:00,Mobile,Daily Tasks,248,11.19,1,GPT-5,421
+2025-03-01 09:40:00,Smart Speaker,Productivity,129,14.95,2,GPT-5.1,286
+2025-01-20 13:30:00,Smart Speaker,Writing,28,2.46,4,o1,1399
+2025-01-08 15:05:00,Smart Speaker,Productivity,109,12.75,1,Mini,1374
+2025-02-08 01:29:00,Smart Speaker,Writing,11,14.4,4,GPT-5,807
+2025-03-08 01:56:00,Mobile,Research,51,8.52,4,o1,229
+2025-02-18 12:32:00,Desktop,Research,97,4.82,2,GPT-5.1,373
+2025-02-13 14:38:00,Tablet,Education,16,5.02,5,GPT-4o,413
+2025-01-29 19:07:00,Smart Speaker,Productivity,28,13.49,3,GPT-4o,1493
+2025-03-05 20:43:00,Tablet,Productivity,112,3.91,4,Mini,873
+2025-02-27 21:23:00,Smart Speaker,Daily Tasks,105,1.61,4,o1,468
+2025-01-28 08:15:00,Mobile,Coding,68,8.69,4,GPT-4o,301
