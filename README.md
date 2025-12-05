@@ -166,8 +166,7 @@ This produces metrics such as:
 
 # **Confusion Matrix**
 
-*Replace this placeholder with your figure:*
-`reports/figures/confusion_matrix.png`
+<img width="640" height="480" alt="confusion_matrix" src="https://github.com/user-attachments/assets/646520fc-295c-42c7-941a-704d0693ea1b" />
 
 ### **Interpretation**
 
@@ -179,8 +178,7 @@ This produces metrics such as:
 
 # **Per-Class F1 Scores**
 
-*Replace with:*
-`reports/figures/per_class_f1.png`
+<img width="640" height="480" alt="per_class_f1" src="https://github.com/user-attachments/assets/aba3c27f-ef97-46d3-a1ee-fce93d983d88" />
 
 ### Insights:
 
@@ -192,8 +190,7 @@ This produces metrics such as:
 
 # **True vs Predicted Satisfaction Distribution**
 
-*Replace with:*
-`reports/figures/satisfaction_distribution.png`
+<img width="640" height="480" alt="satisfaction_distribution" src="https://github.com/user-attachments/assets/0d89e8a0-ad38-4f2e-88fc-e1d699c3e5e8" />
 
 ### Insights:
 
@@ -205,8 +202,7 @@ This produces metrics such as:
 
 # **SHAP Global Feature Importance**
 
-*Replace with:*
-`reports/figures/shap_summary.png`
+<img width="1041" height="680" alt="shap_summary" src="https://github.com/user-attachments/assets/3e05cfa6-1b27-4bfc-999a-d8f207ba28a7" />
 
 ### Top global drivers:
 
