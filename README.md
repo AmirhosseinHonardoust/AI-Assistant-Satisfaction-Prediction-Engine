@@ -249,6 +249,8 @@ Longer sessions → deeper interaction → more positive evaluations.
 
 # **Streamlit Dashboard**
 
+<img width="1289" height="422" alt="Screenshot 2025-12-05 at 18-18-54 AI Assistant Satisfaction Prediction" src="https://github.com/user-attachments/assets/a0e0fc9d-c487-4425-b853-ae2bb66ab4dc" />
+
 Run:
 
 ```bash
