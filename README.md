@@ -5,8 +5,6 @@
   <img src="https://img.shields.io/badge/Data-Synthetic%20AI%20Usage-green" />
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue" />
   <img src="https://img.shields.io/badge/Platform-Streamlit-red" />
-</p>
-
 <p align="center">
   <img src="https://img.shields.io/badge/Model-Multi--Class%20Classifier-blueviolet" />
   <img src="https://img.shields.io/badge/Explainability-SHAP-yellow" />
