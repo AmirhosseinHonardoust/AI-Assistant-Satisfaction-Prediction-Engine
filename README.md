@@ -41,7 +41,7 @@ This repository demonstrates the full lifecycle of a modern ML product:
 * UX-level visualization
 * Deployment-ready scoring pipeline
 
-The outcome is a **behaviorally interpretable AI satisfaction model** capable of shedding light on why users feel satisfied—or frustrated—when engaging with an AI assistant.
+The outcome is a **behaviorally interpretable AI satisfaction model** capable of shedding light on why users feel satisfied or frustrated when engaging with an AI assistant.
 
 ---
 
