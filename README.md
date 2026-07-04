@@ -39,14 +39,37 @@ The pipeline performs:
 
 Trained on 1,200 sessions, evaluated on a held-out 300-session test set:
 
-| Metric | Value |
-| ------ | ----- |
-| Test accuracy | **0.483** |
-| Majority-class baseline | 0.200 |
-| Lift over baseline | **+0.283** |
-| Macro F1 | ~0.47 |
+| Metric | Value | What it tells you |
+| ------ | ----- | ----------------- |
+| Test accuracy | **0.483** | Exact-rating hit rate (single split) |
+| 5-fold CV accuracy | **0.429 ± 0.036** | Stable across folds — the split above isn't a lucky one |
+| Majority-class baseline | 0.200 | Chance for a balanced 5-class target |
+| Lift over baseline | **+0.283** | ~2.4× baseline |
+| Quadratic-weighted kappa | **0.726** | Agreement that rewards *near* predictions (ordinal quality) |
+| Mean absolute error | **0.71** | Average rating distance — most misses are off-by-one |
+| Log loss | 1.25 | Probability quality |
+| Expected calibration error | 0.091 | Confidence-vs-accuracy gap (see reliability diagram) |
 
-Chance for a balanced 5-class problem is 0.20, so the model reaches roughly **2.4×** the baseline. This is a deliberately honest, moderate result: satisfaction is noisy by construction, and adjacent ratings are genuinely hard to separate — which is what a real ordinal satisfaction signal looks like. Metrics are written to [`reports/metrics/metrics.json`](reports/metrics/metrics.json) on every training run.
+The single-split accuracy (0.483) and the cross-validated mean (0.429 ± 0.036) are reported together so the headline isn't cherry-picked. The high **quadratic-weighted kappa (0.73)** is the important number for an ordered target: the model rarely makes large errors — most mistakes are adjacent ratings. All values are written to [`reports/metrics/metrics.json`](reports/metrics/metrics.json) on every training run.
+
+### Is ordinal regression better here?
+
+The 1–5 target is ordered, so a natural question is whether a dedicated **ordinal** model beats flat multi-class. This is tested reproducibly in [`src/evaluate.py`](src/evaluate.py) (`compare_ordinal_vs_flat`), which fits a Frank & Hall ordinal wrapper ([`src/ordinal.py`](src/ordinal.py)) on the same split and writes [`reports/metrics/ordinal_comparison.json`](reports/metrics/ordinal_comparison.json):
+
+| Model | Accuracy | MAE | QWK |
+| ----- | -------- | --- | --- |
+| Flat RandomForest (default) | **0.483** | **0.71** | **0.726** |
+| Frank & Hall ordinal RF | 0.397 | 1.01 | 0.640 |
+
+The flat forest wins on every metric — it already respects the ordering via `class_weight="balanced"` and the SHAP-visible structure — so it stays the default. The ordinal model is kept as a documented, tested alternative rather than dropped, so the conclusion is checkable, not asserted.
+
+### Calibration
+
+`predict_proba` reliability is measured with a reliability diagram and Expected Calibration Error (ECE):
+
+<img src="reports/figures/reliability_diagram.png" width="480" alt="reliability diagram" />
+
+The RandomForest is moderately calibrated (ECE ≈ 0.09). Post-hoc **sigmoid (Platt) recalibration** reduces ECE to ≈ 0.06 but costs ~3 points of accuracy, so it is reported rather than applied by default; enable it downstream with `sklearn.calibration.CalibratedClassifierCV` if trustworthy probabilities matter more than exact-rating accuracy for your use case.
 
 ---
 
@@ -64,17 +87,19 @@ AI-Assistant-Satisfaction-Prediction-Engine/
 │       ├── sessions_train.csv
 │       └── sessions_test.csv
 │
-├── models/
-│   └── satisfaction_pipeline.joblib        # Trained ML pipeline
+├── models/                                 # satisfaction_pipeline.joblib is a
+│   └── .gitkeep                            #   build artifact (git-ignored, see below)
 │
 ├── reports/
 │   ├── metrics/
 │   │   ├── metrics.json
-│   │   └── classification_report.json
+│   │   ├── classification_report.json
+│   │   └── ordinal_comparison.json         # flat-RF vs ordinal experiment
 │   └── figures/
 │       ├── confusion_matrix.png
 │       ├── satisfaction_distribution.png
 │       ├── per_class_f1.png
+│       ├── reliability_diagram.png         # calibration curve
 │       └── shap_summary.png
 │
 ├── src/
@@ -85,13 +110,15 @@ AI-Assistant-Satisfaction-Prediction-Engine/
 │   ├── data_prep.py
 │   ├── features.py
 │   ├── shap_utils.py                       # Version-robust SHAP shape helpers
+│   ├── model_metrics.py                    # Ordinal + calibration metric helpers
+│   ├── ordinal.py                          # Frank & Hall ordinal classifier
 │   ├── train_model.py
 │   ├── evaluate.py
 │   ├── explain.py
 │   └── score_new_sessions.py
 │
-├── tests/                                  # pytest suite
-├── .github/workflows/ci.yml                # ruff + black + mypy + pytest
+├── tests/                                  # pytest suite (20 tests)
+├── .github/workflows/ci.yml                # gate + full-pipeline job w/ artifacts
 ├── pyproject.toml                          # Tooling configuration
 ├── requirements.txt
 ├── LICENSE
@@ -222,11 +249,16 @@ pip install -r requirements.txt
 
 python -m src.generate_data   # 1) create the synthetic raw dataset
 python -m src.data_prep       # 2) time features + stratified train/test split
-python -m src.train_model     # 3) train, evaluate, save model + metrics
-python -m src.evaluate        # 4) confusion matrix, distribution, per-class F1
+python -m src.train_model     # 3) train, save model, write accuracy/CV/QWK/MAE metrics
+python -m src.evaluate        # 4) confusion matrix, distribution, per-class F1,
+                              #    reliability diagram, ordinal-vs-flat comparison
 python -m src.explain         # 5) SHAP global summary
 streamlit run app.py          # 6) launch the dashboard
 ```
+
+## Model artifact
+
+`models/satisfaction_pipeline.joblib` is a **build artifact**, not committed to git (it is `.gitignore`d). Because the whole pipeline is deterministic, you reproduce it exactly with `python -m src.train_model`. CI also trains it on every run and publishes it (plus `reports/`) as a downloadable **GitHub Actions artifact**. Run steps 1–3 above before launching the dashboard or scoring new sessions.
 
 ---
 
@@ -238,10 +270,12 @@ This repo ships a CI-enforced quality gate (see [`.github/workflows/ci.yml`](.gi
 ruff check .          # lint (E,F,I,B,SIM,UP), line-length 100
 black --check .       # formatting, line-length 100
 mypy src app.py       # static type checking
-pytest                # unit tests (heavy shap/streamlit tests skip cleanly)
+pytest                # 20 unit tests (heavy shap/streamlit tests skip cleanly)
 ```
 
-Tests cover time-feature engineering, the training pipeline, the stratified split, batch scoring round-trips, the documented data signal, and the version-robust SHAP shape helpers.
+CI runs two jobs: a **quality-gate** job (the four commands above, on Python 3.10 and 3.12) and a **pipeline** job that executes the full `generate_data → data_prep → train_model → evaluate → explain` chain end-to-end and uploads the trained model and reports as artifacts — so the training path itself is exercised in CI, not just the unit tests.
+
+The 20 tests cover time-feature engineering, the training pipeline, the stratified split, batch scoring round-trips, the documented data signal, the version-robust SHAP shape helpers, the ordinal (Frank & Hall) classifier, and the calibration/ordinal metric helpers (ECE, MAE, QWK).
 
 ---
 
@@ -273,19 +307,18 @@ Python 3.10+, pandas, numpy, scikit-learn, matplotlib, seaborn, SHAP, Streamlit,
 
 # **Limitations**
 
-* Synthetic data: results reflect a *designed* signal, not real users. Real satisfaction would be noisier and confounded.
-* Moderate accuracy (~0.48) is intentional — the noise term keeps the task realistic.
-* Treated as flat multi-class rather than ordinal.
+* Synthetic data: results reflect a *designed* signal, not real users. Real satisfaction would be noisier and confounded — this is the main bound on the findings.
+* Moderate accuracy (~0.48, CV 0.43) is intentional — the noise term keeps the task realistic; quadratic-weighted kappa (0.73) shows errors are mostly adjacent.
+* The target is ordered; a Frank & Hall ordinal model was evaluated and did **not** beat the flat forest here (see Results), so flat multi-class is retained.
 * No per-user personalization or temporal modeling.
 
 ---
 
 # **Future Work**
 
-* Reframe as **ordinal regression** to exploit the natural ordering.
-* Add calibration plots and probability calibration.
-* Add temporal / sequence features per user.
-* Deploy the scorer as a FastAPI microservice.
+* Validate on a **real** (non-synthetic) dataset — the single biggest open item.
+* Add temporal / sequence features per user and per-user personalization.
+* Deploy the scorer as a FastAPI microservice with the CI-built model artifact.
 
 ---
 
