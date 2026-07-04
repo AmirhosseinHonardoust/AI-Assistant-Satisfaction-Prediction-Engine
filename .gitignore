@@ -23,3 +23,8 @@ env/
 
 # Scored outputs produced at runtime
 *_scored.csv
+
+# Trained model is a build artifact (produced by `python -m src.train_model`
+# and by CI), not committed. Small reporting figures/metrics are kept for the
+# README to render.
+models/*.joblib
