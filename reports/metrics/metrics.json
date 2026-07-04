@@ -2,5 +2,11 @@
   "accuracy": 0.48333333333333334,
   "baseline_accuracy": 0.2,
   "lift_over_baseline": 0.2833333333333333,
-  "n_test_samples": 300
+  "cv_accuracy_mean": 0.4293333333333333,
+  "cv_accuracy_std": 0.03561522770451489,
+  "mae": 0.7133333333333334,
+  "quadratic_weighted_kappa": 0.725609756097561,
+  "log_loss": 1.2513373472029916,
+  "n_test_samples": 300,
+  "random_state": 42
 }

@@ -1,0 +1,12 @@
+{
+  "flat_rf": {
+    "accuracy": 0.48333333333333334,
+    "mae": 0.7133333333333334,
+    "quadratic_weighted_kappa": 0.725609756097561
+  },
+  "ordinal_frank_hall": {
+    "accuracy": 0.39666666666666667,
+    "mae": 1.0066666666666666,
+    "quadratic_weighted_kappa": 0.6404109589041096
+  }
+}
