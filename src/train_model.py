@@ -1,15 +1,17 @@
+from __future__ import annotations
+
 import json
 
 import joblib
-import numpy as np
 import pandas as pd
-from sklearn.metrics import classification_report, accuracy_score
+from sklearn.dummy import DummyClassifier
+from sklearn.metrics import accuracy_score, classification_report
 
-from .config import PROCESSED_DATA_DIR, MODELS_DIR, METRICS_DIR, TARGET_COL
+from .config import METRICS_DIR, MODELS_DIR, PROCESSED_DATA_DIR, TARGET_COL
 from .features import build_pipeline
 
 
-def load_processed():
+def load_processed() -> tuple[pd.DataFrame, pd.DataFrame]:
     train_path = PROCESSED_DATA_DIR / "sessions_train.csv"
     test_path = PROCESSED_DATA_DIR / "sessions_test.csv"
 
@@ -36,17 +38,19 @@ def train_and_evaluate() -> dict:
     pipeline.fit(X_train, y_train)
 
     y_pred = pipeline.predict(X_test)
-
     acc = accuracy_score(y_test, y_pred)
-    cls_report = classification_report(
-        y_test,
-        y_pred,
-        output_dict=True,
-        digits=3,
-    )
+
+    # Honest reference point: a majority-class baseline for this 5-class task.
+    baseline = DummyClassifier(strategy="most_frequent")
+    baseline.fit(X_train, y_train)
+    baseline_acc = accuracy_score(y_test, baseline.predict(X_test))
+
+    cls_report = classification_report(y_test, y_pred, output_dict=True, digits=3)
 
     metrics = {
         "accuracy": float(acc),
+        "baseline_accuracy": float(baseline_acc),
+        "lift_over_baseline": float(acc - baseline_acc),
         "n_test_samples": int(len(y_test)),
     }
 
@@ -64,7 +68,7 @@ def train_and_evaluate() -> dict:
     print(f"Saved model to:   {model_path}")
     print(f"Saved metrics to: {metrics_path}")
     print(f"Saved report to:  {report_path}")
-    print(f"Test accuracy:    {acc:.4f}")
+    print(f"Test accuracy:    {acc:.4f}  (baseline {baseline_acc:.4f})")
 
     return metrics
 

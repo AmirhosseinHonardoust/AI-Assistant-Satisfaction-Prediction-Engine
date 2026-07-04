@@ -1,35 +1,30 @@
+from __future__ import annotations
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
 from .config import (
-    RAW_DATA_PATH,
     PROCESSED_DATA_DIR,
-    TARGET_COL,
-    TIME_COL,
-    TEST_SIZE,
     RANDOM_STATE,
+    RAW_DATA_PATH,
+    TARGET_COL,
+    TEST_SIZE,
+    TIME_COL,
 )
+from .time_features import add_time_features
 
 
 def load_raw(path: str | None = None) -> pd.DataFrame:
     csv_path = RAW_DATA_PATH if path is None else path
-    df = pd.read_csv(csv_path)
-    return df
+    return pd.read_csv(csv_path)
 
 
 def engineer_time_features(df: pd.DataFrame) -> pd.DataFrame:
     """Add hour_of_day, day_of_week, is_weekend derived from timestamp."""
-    df = df.copy()
-    df[TIME_COL] = pd.to_datetime(df[TIME_COL])
-
-    df["hour_of_day"] = df[TIME_COL].dt.hour
-    df["day_of_week"] = df[TIME_COL].dt.dayofweek  # Monday=0
-    df["is_weekend"] = df["day_of_week"].isin([5, 6]).astype(int)
-
-    return df
+    return add_time_features(df)
 
 
-def split_train_test(df: pd.DataFrame):
+def split_train_test(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     if TARGET_COL not in df.columns:
         raise ValueError(f"Target column '{TARGET_COL}' missing from data.")
 
