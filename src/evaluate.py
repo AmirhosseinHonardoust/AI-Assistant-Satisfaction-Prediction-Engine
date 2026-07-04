@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json
 
 import joblib
@@ -5,13 +7,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.metrics import classification_report, confusion_matrix
 
 from .config import (
-    PROCESSED_DATA_DIR,
-    MODELS_DIR,
-    METRICS_DIR,
     FIGURES_DIR,
+    METRICS_DIR,
+    MODELS_DIR,
+    PROCESSED_DATA_DIR,
     TARGET_COL,
 )
 
@@ -27,21 +29,18 @@ def load_model_and_data():
 
     X_test = test_df.drop(columns=[TARGET_COL])
     y_test = test_df[TARGET_COL]
-
     return model, X_test, y_test
 
 
-def plot_confusion_matrix(y_true, y_pred):
-    cm = confusion_matrix(y_true, y_pred)
+def plot_confusion_matrix(y_true, y_pred) -> None:
     labels = sorted(np.unique(y_true))
+    cm = confusion_matrix(y_true, y_pred, labels=labels)
 
     fig, ax = plt.subplots()
-    sns.heatmap(cm, annot=True, fmt="d", cbar=True, ax=ax)
+    sns.heatmap(cm, annot=True, fmt="d", cbar=True, ax=ax, xticklabels=labels, yticklabels=labels)
     ax.set_xlabel("Predicted")
     ax.set_ylabel("True")
     ax.set_title("Confusion Matrix - Satisfaction Rating")
-    ax.set_xticklabels(labels)
-    ax.set_yticklabels(labels, rotation=0)
 
     cm_path = FIGURES_DIR / "confusion_matrix.png"
     plt.tight_layout()
@@ -50,20 +49,14 @@ def plot_confusion_matrix(y_true, y_pred):
     print(f"Saved confusion matrix to: {cm_path}")
 
 
-def plot_satisfaction_distribution(y_true, y_pred):
+def plot_satisfaction_distribution(y_true, y_pred) -> None:
     fig, ax = plt.subplots()
-    df_plot = pd.DataFrame(
-        {
-            "true": y_true,
-            "pred": y_pred,
-        }
-    )
+    df_plot = pd.DataFrame({"true": y_true, "pred": y_pred})
 
     df_true = df_plot["true"].value_counts(normalize=True).sort_index()
     df_pred = df_plot["pred"].value_counts(normalize=True).sort_index()
 
     idx = sorted(set(df_true.index).union(df_pred.index))
-
     true_vals = [df_true.get(i, 0) for i in idx]
     pred_vals = [df_pred.get(i, 0) for i in idx]
 
@@ -86,8 +79,8 @@ def plot_satisfaction_distribution(y_true, y_pred):
     print(f"Saved satisfaction distribution plot to: {dist_path}")
 
 
-def plot_per_class_f1(report_dict):
-    labels = [k for k in report_dict.keys() if k.isdigit()]
+def plot_per_class_f1(report_dict) -> None:
+    labels = [k for k in report_dict if k.isdigit()]
     f1_scores = [report_dict[k]["f1-score"] for k in labels]
 
     fig, ax = plt.subplots()
@@ -110,13 +103,9 @@ def main() -> None:
     model, X_test, y_test = load_model_and_data()
     y_pred = model.predict(X_test)
 
-    # Confusion matrix
     plot_confusion_matrix(y_test, y_pred)
-
-    # Distribution comparison
     plot_satisfaction_distribution(y_test, y_pred)
 
-    # Classification report
     report = classification_report(y_test, y_pred, output_dict=True, digits=3)
     report_path = METRICS_DIR / "classification_report.json"
     with report_path.open("w") as f:

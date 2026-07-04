@@ -1,4 +1,6 @@
 {
-  "accuracy": 0.2,
-  "n_test_samples": 60
+  "accuracy": 0.48333333333333334,
+  "baseline_accuracy": 0.2,
+  "lift_over_baseline": 0.2833333333333333,
+  "n_test_samples": 300
 }
